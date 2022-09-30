@@ -19,7 +19,7 @@ I am covering how to do state management using the diverse tools of:
 
 You will find article about flutter state architecture at
 
-{My Medium blog](https://fredgrott.medium.com)
+[My Medium blog](https://fredgrott.medium.com)
 
 Medium Friend links, i.e. free viewing without medium membership, show up in posts on these social 
 platforms:
