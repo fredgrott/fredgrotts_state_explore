@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite errors="0" failures="0" tests="3" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.app" timestamp="2022-09-30T14:40:24">
+    <properties>
+      <property name="platform" value="vm"/>
+    </properties>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.app" name="CounterApp is a MaterialApp" time="0.308"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.app" name="CounterApp home is CounterPage" time="0.029"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.app" name="CounterApp renders CounterPage" time="3.894"/>
+  </testsuite>
+  <testsuite errors="0" failures="0" tests="1" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_page" timestamp="2022-09-30T14:40:24">
+    <properties>
+      <property name="platform" value="vm"/>
+    </properties>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_page" name="CounterPage renders CounterView" time="3.811"/>
+  </testsuite>
+  <testsuite errors="0" failures="0" tests="3" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_view" timestamp="2022-09-30T14:40:24">
+    <properties>
+      <property name="platform" value="vm"/>
+    </properties>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_view" name="CounterView renders current CounterCubit state" time="2.719"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_view" name="CounterView tapping increment button invokes increment" time="0.246"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_view" name="CounterView tapping decrement button invokes decrement" time="0.061"/>
+  </testsuite>
+  <testsuite errors="0" failures="0" tests="7" skipped="0" name="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.cubit.counter_cubit" timestamp="2022-09-30T14:40:24">
+    <properties>
+      <property name="platform" value="vm"/>
+    </properties>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.cubit.counter_cubit" name="CounterCubit initial state is 0" time="0.052"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.cubit.counter_cubit" name="CounterCubit increment emits [1] when state is 0" time="0.021"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.cubit.counter_cubit" name="CounterCubit increment emits [1, 2] when state is 0 and invoked twice" time="0.007"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.cubit.counter_cubit" name="CounterCubit increment emits [42] when state is 41" time="0.008"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.cubit.counter_cubit" name="CounterCubit decrement emits [-1] when state is 0" time="0.006"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.cubit.counter_cubit" name="CounterCubit decrement emits [-1, -2] when state is 0 and invoked twice" time="0.006"/>
+    <testcase classname="D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.cubit.counter_cubit" name="CounterCubit decrement emits [42] when state is 43" time="0.006"/>
+  </testsuite>
+</testsuites>

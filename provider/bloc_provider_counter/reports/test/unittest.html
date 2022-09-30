@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>unittest.xml</title>
+    <style type="text/css">
+        body {
+    background-color: white;
+    padding-bottom: 20em;
+    margin: 0;
+    min-height: 15cm;
+}
+
+h1, h2, h3, h4, h5, h6, h7 {
+    font-family: sans-serif;
+}
+
+h1 {
+    background-color: #007acc;
+    color: white;
+    padding: 3mm;
+    margin-top: 0;
+    margin-bottom: 1mm;
+}
+
+.footer {
+    font-style: italic;
+    font-size: small;
+    text-align: right;
+    padding: 1em;
+}
+
+.testsuite {
+    padding-bottom: 2em;
+    margin-left: 1em;
+}
+
+.proplist {
+    width: 100%;
+    margin-bottom: 2em;
+    border-collapse: collapse;
+    border: 1px solid grey;
+}
+
+.proplist th {
+    background-color: silver;
+    width: 5em;
+    padding: 2px;
+    padding-right: 1em;
+    text-align: left;
+}
+
+.proplist td {
+    padding: 2px;
+}
+
+.index-table {
+    width: 90%;
+    margin-left: 1em;
+}
+
+.index-table td {
+    vertical-align: top;
+    width: 50%;
+}
+
+.failure-index {
+
+}
+
+.toc {
+    margin-bottom: 2em;
+    font-family: monospace;
+}
+
+.stdio, pre {
+    min-height: 1em;
+    background-color: #1e1e1e;
+    color: silver;
+    padding: 0.5em;
+}
+.tdpre {
+    background-color: #1e1e1e;
+}
+
+.test {
+    margin-left: 0.5cm;
+}
+
+.outcome {
+    border-left: 1em;
+    padding: 2px;
+}
+
+.outcome-failed {
+    border-left: 1em solid lightcoral;
+}
+
+.stats-table {
+}
+
+.stats-table td {
+    min-width: 4em;
+    text-align: right;
+}
+
+.stats-table .failed {
+    background-color: lightcoral;
+}
+
+.stats-table .passed {
+    background-color: lightgreen;
+}
+
+.matrix-table {
+    table-layout: fixed;
+    border-spacing: 0;
+    width: available;
+    margin-left: 1em;
+}
+
+.matrix-table td {
+    vertical-align: center;
+}
+
+.matrix-table td:last-child {
+    width: 0;
+}
+
+.matrix-axis-name {
+    white-space: nowrap;
+    padding-left: 0.5em;
+    border-left: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.matrix-axis-line {
+    border-left: 1px solid black;
+    width: 0.5em;
+}
+
+.matrix-classname {
+    text-align: left;
+    width: 100%;
+    border-top: 2px solid grey;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-casename {
+    text-align: left;
+    font-weight: normal;
+    font-style: italic;
+    padding-left: 1em;
+    border-bottom: 1px solid silver;
+}
+
+.matrix-result {
+    display: block;
+    width: 1em;
+    text-align: center;
+    padding: 1mm;
+    margin: 0;
+}
+
+.matrix-result-combined {
+    white-space: nowrap;
+    padding-right: 0.2em;
+    text-align: right;
+}
+
+.matrix-result-failed {
+    background-color: lightcoral;
+}
+
+.matrix-result-passed {
+    background-color: lightgreen;
+}
+
+.matrix-result-skipped {
+    background-color: lightyellow;
+}
+    </style>
+</head>
+<body>
+    
+<h1>
+    Test Report : unittest.xml
+</h1>
+<a id="toc"></a>
+<table class="index-table">
+    <tr>
+        <td>
+            <ul class="toc">
+            
+                
+                <li>D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.app
+                <ul>
+                    
+                    <li><a href="#be68614d-63ac-446e-ad74-4ec1a15ed6a0">CounterApp is a MaterialApp</a></li>
+                    
+                    <li><a href="#088a884a-d052-4c95-9b07-b477bae175ec">CounterApp home is CounterPage</a></li>
+                    
+                    <li><a href="#b3cfc66c-b099-4efc-b768-d54eaf6a07ad">CounterApp renders CounterPage</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_page
+                <ul>
+                    
+                    <li><a href="#74c8043f-e4b5-4f60-82f9-42e48f4cc916">CounterPage renders CounterView</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_view
+                <ul>
+                    
+                    <li><a href="#0a1b1b5e-66eb-43b7-9076-e2713f4dcee9">CounterView renders current CounterCubit state</a></li>
+                    
+                    <li><a href="#892ea2c9-2cdd-41c9-b9d9-c471fb9721bd">CounterView tapping increment button invokes increment</a></li>
+                    
+                    <li><a href="#bad512ec-8ddd-4f5e-9c03-b356a212522e">CounterView tapping decrement button invokes decrement</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+                
+                <li>D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.cubit.counter_cubit
+                <ul>
+                    
+                    <li><a href="#937b6336-77b0-43a5-af7d-5ae84120d0ca">CounterCubit initial state is 0</a></li>
+                    
+                    <li><a href="#304dad90-9c6d-4b43-9f01-913b7e7c1525">CounterCubit increment emits [1] when state is 0</a></li>
+                    
+                    <li><a href="#f0fa998a-1cef-498f-91d1-6ec5b15fdf67">CounterCubit increment emits [1, 2] when state is 0 and invoked twice</a></li>
+                    
+                    <li><a href="#6444758b-001b-472f-9e02-e6901cd3e279">CounterCubit increment emits [42] when state is 41</a></li>
+                    
+                    <li><a href="#3b3ab510-be90-4e13-8794-39d78ebc6739">CounterCubit decrement emits [-1] when state is 0</a></li>
+                    
+                    <li><a href="#adb90b4f-8e1b-4111-a8dd-6e3e9944c7bf">CounterCubit decrement emits [-1, -2] when state is 0 and invoked twice</a></li>
+                    
+                    <li><a href="#e3ec38a7-50fe-481e-af20-cd7abe5b7692">CounterCubit decrement emits [42] when state is 43</a></li>
+                    
+                </ul>
+                </li>
+                
+            
+            </ul>
+        </td>
+        <td class="failure-index">
+            <ul class="toc">
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+                
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                
+            
+            </ul>
+        </td>
+    </tr>
+</table>
+
+
+    <div class="testsuite">
+        <h2>Test Suite: D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.app</h2>
+        <a id="540a9048-4b97-494c-8a87-e970ebffbe2d"></a>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>platform</th><td>vm</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.0 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>3</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.app</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="be68614d-63ac-446e-ad74-4ec1a15ed6a0"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterApp is a MaterialApp</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.3 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="088a884a-d052-4c95-9b07-b477bae175ec"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterApp home is CounterPage</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="b3cfc66c-b099-4efc-b768-d54eaf6a07ad"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterApp renders CounterPage</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>3.9 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_page</h2>
+        <a id="937b752a-ad6d-4a9a-9c39-df17e356a62d"></a>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>platform</th><td>vm</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.0 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>1</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_page</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="74c8043f-e4b5-4f60-82f9-42e48f4cc916"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterPage renders CounterView</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>3.8 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_view</h2>
+        <a id="201d2bb3-ef5f-40b7-9f39-8be1ae8b632a"></a>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>platform</th><td>vm</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.0 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>3</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.counter_view</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="0a1b1b5e-66eb-43b7-9076-e2713f4dcee9"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterView renders current CounterCubit state</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>2.7 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="892ea2c9-2cdd-41c9-b9d9-c471fb9721bd"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterView tapping increment button invokes increment</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.2 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="bad512ec-8ddd-4f5e-9c03-b356a212522e"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterView tapping decrement button invokes decrement</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.1 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+    <div class="testsuite">
+        <h2>Test Suite: D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.cubit.counter_cubit</h2>
+        <a id="a1a9f4a7-fae3-4081-9903-05303530d881"></a>
+        
+        
+        <h3>Suite Properties</h3>
+        <table class="proplist">
+            
+            <tr>
+                <th>platform</th><td>vm</td>
+            </tr>
+            
+        </table>
+        
+        <h3>Results</h3>
+        <table class="proplist">
+            <tr>
+                <th>Duration</th><td>0.0 sec</td>
+            </tr>
+            <tr>
+                <th>Tests</th><td>7</td>
+            </tr>
+            <tr>
+                <th>Failures</th><td>0</td>
+            </tr>
+        </table>
+
+        <div class="testclasses">
+            <h3>Tests</h3>
+            
+            <div class="testclass">
+                <h4>D:.fredgrttsstuff.GithubProjects.fredgrotts_state_explore.provider.bloc_provider_counter.test.counter.view.cubit.counter_cubit</h4>
+                <div class="testcases">
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="937b6336-77b0-43a5-af7d-5ae84120d0ca"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterCubit initial state is 0</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.1 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="304dad90-9c6d-4b43-9f01-913b7e7c1525"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterCubit increment emits [1] when state is 0</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="f0fa998a-1cef-498f-91d1-6ec5b15fdf67"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterCubit increment emits [1, 2] when state is 0 and invoked twice</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="6444758b-001b-472f-9e02-e6901cd3e279"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterCubit increment emits [42] when state is 41</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="3b3ab510-be90-4e13-8794-39d78ebc6739"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterCubit decrement emits [-1] when state is 0</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="adb90b4f-8e1b-4111-a8dd-6e3e9944c7bf"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterCubit decrement emits [-1, -2] when state is 0 and invoked twice</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                    <div class="test outcome outcome-passed">
+                        <a id="e3ec38a7-50fe-481e-af20-cd7abe5b7692"></a>
+                        <table class="proplist">
+                            <tr><th>Test case:</th><td><b>CounterCubit decrement emits [42] when state is 43</b></td></tr>
+                            <tr><th>Outcome:</th><td>Passed</td></tr>
+                            <tr><th>Duration:</th><td>0.0 sec</td></tr>
+                        
+                            <tr><th>Failed</th><td>None</td></tr>
+                        
+                        
+                        </table>
+
+                        
+                        <pre>None</pre>
+                        
+                        
+
+                        
+                        
+                        
+                    </div>
+                
+                </div>
+            </div>
+            
+        </div>
+    </div>
+    
+
+
+
+<p class="footer">
+    Generated by junit2html
+</p>
+</body>
+</html>

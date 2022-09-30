@@ -1,0 +1,35 @@
+@startuml
+set namespaceSeparator ::
+
+class "bloc_provider_counter::src::presentation::features::app::counter_app.dart::CounterApp" {
+}
+
+"flutter::src::material::app.dart::MaterialApp" <|-- "bloc_provider_counter::src::presentation::features::app::counter_app.dart::CounterApp"
+
+class "bloc_provider_counter::src::presentation::features::counter::cubits::counter_cubit.dart::CounterCubit" {
+  +void increment()
+  +void decrement()
+}
+
+"bloc::src::cubit.dart::Cubit" <|-- "bloc_provider_counter::src::presentation::features::counter::cubits::counter_cubit.dart::CounterCubit"
+
+class "bloc_provider_counter::src::presentation::features::counter::observers::counter_observer.dart::CounterObserver" {
+  +void onChange()
+}
+
+"bloc::src::bloc_observer.dart::BlocObserver" <|-- "bloc_provider_counter::src::presentation::features::counter::observers::counter_observer.dart::CounterObserver"
+
+class "bloc_provider_counter::src::presentation::features::counter::views::counter_page.dart::CounterPage" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "bloc_provider_counter::src::presentation::features::counter::views::counter_page.dart::CounterPage"
+
+class "bloc_provider_counter::src::presentation::features::counter::views::counter_view.dart::CounterView" {
+  +Widget build()
+}
+
+"flutter::src::widgets::framework.dart::StatelessWidget" <|-- "bloc_provider_counter::src::presentation::features::counter::views::counter_view.dart::CounterView"
+
+
+@enduml
